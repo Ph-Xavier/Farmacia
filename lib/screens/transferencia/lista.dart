@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'formulario.dart';
 import '../../models/transferencia.dart';
+import 'package:intl/intl.dart';
 
 class ListaTransferencias extends StatefulWidget {
   const ListaTransferencias({super.key});
@@ -56,10 +57,11 @@ class ItemTransferencia extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    NumberFormat formato = NumberFormat.simpleCurrency();
     return Card(
       child: ListTile(
         leading: Icon(Icons.monetization_on),
-        title: Text(transferencia.valor.toString()),
+        title: Text(formato.format(transferencia.valor).toString()),
         subtitle: Text(transferencia.numeroConta.toString()),
       ),
     );
