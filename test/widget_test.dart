@@ -8,16 +8,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:bank/main.dart';
+import 'package:farmacia/main.dart';
 
 void main() {
-  testWidgets('creates and lists a transfer', (WidgetTester tester) async {
+  testWidgets('creates and lists a venda', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const BankApp());
+    await tester.pumpWidget(const VendaFarmaciaApp());
 
-    expect(find.text('Transferências'), findsOneWidget);
+    expect(find.text('Vendas'), findsOneWidget);
 
-    await tester.tap(find.byIcon(Icons.add));
+    await tester.tap(find.byIcon(Icons.local_pharmacy));
     await tester.pumpAndSettle();
 
     await tester.enterText(find.byType(TextField).at(0), '1234');
@@ -25,7 +25,7 @@ void main() {
     await tester.tap(find.text('Confirmar'));
     await tester.pumpAndSettle();
 
-    expect(find.text('12.5'), findsOneWidget);
-    expect(find.text('1234'), findsOneWidget);
+    expect(find.textContaining('12,50'), findsOneWidget);
+    expect(find.text('Nº do cupom: 1234'), findsOneWidget);
   });
 }
