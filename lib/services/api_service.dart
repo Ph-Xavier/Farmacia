@@ -21,7 +21,7 @@ class ApiService {
   // isso facilita os testes de indisponibilidade da api.
   static const String baseUrl = String.fromEnvironment(
     'API_BASE_URL',
-    defaultValue: 'https://farmacia-api.onrender.com',
+    defaultValue: 'https://farmacia-api-of5q.onrender.com',
   );
 
   // tempo máximo de espera de cada requisição.

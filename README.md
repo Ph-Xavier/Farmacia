@@ -4,7 +4,7 @@
 
 **Nome completo do estudante:** Pedro Henrique Xavier Constancio
 
-**Link da API publicada:** https://farmacia-api.onrender.com
+**Link da API publicada:** https://farmacia-api-of5q.onrender.com
 
 **Descrição resumida da aplicação:** aplicativo Flutter para registrar e listar
 vendas de uma farmácia, além de cadastrar clientes. Os dados são persistidos
@@ -17,7 +17,7 @@ PostgreSQL, seguindo a estratégia Offline-first.
 
 - **Repositório Flutter:** https://github.com/Ph-Xavier/Farmacia
 - **Repositório da API:** https://github.com/Ph-Xavier/farmacia-api
-- **API publicada:** https://farmacia-api.onrender.com
+- **API publicada:** https://farmacia-api-of5q.onrender.com
 - **Roteiro dos testes obrigatórios:** [`docs/ROTEIRO_TESTES.md`](docs/ROTEIRO_TESTES.md)
 - **Vídeo de demonstração:** inserir o link do vídeo antes da entrega no Teams
 
@@ -68,19 +68,19 @@ lib/
 ## API própria
 
 - **Repositório da API:** https://github.com/Ph-Xavier/farmacia-api
-- **API publicada:** https://farmacia-api.onrender.com
+- **API publicada:** https://farmacia-api-of5q.onrender.com
 
 A API contém apenas as rotas da temática farmácia.
 
-> **Importante — deploy no Render:** o repositório da API inclui um
-> `render.yaml`. No Render, use **New + → Blueprint**, selecione o repositório
-> `farmacia-api` e clique em **Apply**. Isso cria o Web Service
-> `farmacia-api` e um PostgreSQL novo `farmacia-db`, já conectados pela variável
+> **API publicada:** o serviço está no ar em
+> `https://farmacia-api-of5q.onrender.com` (o Render adicionou o sufixo `-of5q`
+> porque `farmacia-api` já estava em uso). O repositório da API inclui um
+> `render.yaml`. Se precisar recriar os recursos, use **New + → Blueprint**,
+> selecione o repositório `farmacia-api` e clique em **Apply**. Isso cria o Web
+> Service e um PostgreSQL `farmacia-db`, já conectados pela variável
 > `DATABASE_URL`. Depois do deploy, acesse `/criar-tabelas` uma vez. Se o Render
-> gerar um subdomínio diferente de `farmacia-api.onrender.com`, atualize o link
-> acima e o `ApiService` (ou use `--dart-define=API_BASE_URL=...`). Após
-> confirmar que o novo serviço está **Live**, exclua o Web Service e o banco
-> antigos no Render.
+> gerar outro subdomínio, atualize o link acima e o `ApiService` (ou use
+> `--dart-define=API_BASE_URL=...`).
 
 ### Rotas principais
 
