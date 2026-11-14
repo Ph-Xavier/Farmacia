@@ -25,12 +25,10 @@ class VendaFarmacia {
 
   // cria uma venda a partir de um JSON recebido da api.
   //
-  // a api compartilhada com o projeto bank usa o campo numero_conta.
-  // por isso aceitamos tanto numero_cupom quanto numero_conta.
+  // a api da farmácia retorna o campo numero_cupom.
   factory VendaFarmacia.fromJson(Map<String, dynamic> json) {
     final valor = json['valor'];
-    final numeroCupom =
-        json['numero_cupom'] ?? json['numeroCupom'] ?? json['numero_conta'];
+    final numeroCupom = json['numero_cupom'] ?? json['numeroCupom'];
 
     return VendaFarmacia(
       double.parse(valor.toString()),

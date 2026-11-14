@@ -9,17 +9,17 @@ não funciona no navegador.
 1. Verifique se a API está no ar:
 
    ```bash
-   curl https://bank-api-t311.onrender.com/teste-banco
-   curl https://bank-api-t311.onrender.com/vendas
+   curl https://farmacia-api.onrender.com/teste-banco
+   curl https://farmacia-api.onrender.com/vendas
    ```
 
-   Se `/vendas` retornar 404, faça o deploy manual no Render
-   (**Manual Deploy → Deploy latest commit**) e aguarde o status **Live**.
+   Se `/vendas` retornar 404, confira no Render se o serviço `farmacia-api`
+   está com o deploy mais recente e o status **Live**.
 
 2. Se as tabelas ainda não existirem, acesse uma vez:
 
    ```bash
-   curl https://bank-api-t311.onrender.com/criar-tabelas
+   curl https://farmacia-api.onrender.com/criar-tabelas
    ```
 
 3. Instale as dependências e rode o app:
@@ -42,7 +42,7 @@ não funciona no navegador.
 9. Consulte a API:
 
    ```bash
-   curl https://bank-api-t311.onrender.com/vendas
+   curl https://farmacia-api.onrender.com/vendas
    ```
 
 10. Confirme que a venda está no JSON retornado.
@@ -86,7 +86,7 @@ PostgreSQL.
 7. Consulte a API:
 
    ```bash
-   curl https://bank-api-t311.onrender.com/vendas
+   curl https://farmacia-api.onrender.com/vendas
    ```
 
 8. Confirme que a venda do Teste 2 agora está no PostgreSQL.

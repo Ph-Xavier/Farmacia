@@ -25,13 +25,12 @@ class Cliente {
 
   // cria um cliente a partir de um JSON recebido da api.
   //
-  // a api compartilhada com o projeto bank usa o campo numero_conta.
-  // por isso aceitamos tanto codigo quanto numero_conta.
+  // a api da farmácia retorna o campo codigo.
   factory Cliente.fromJson(Map<String, dynamic> json) {
     return Cliente(
       id: json['id'] == null ? null : int.parse(json['id'].toString()),
       nome: json['nome'] as String,
-      codigo: int.parse((json['codigo'] ?? json['numero_conta']).toString()),
+      codigo: int.parse(json['codigo'].toString()),
     );
   }
 

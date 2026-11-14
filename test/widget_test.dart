@@ -80,17 +80,6 @@ void main() {
     expect(venda.numeroCupom, 1234);
   });
 
-  test('aceita venda no formato antigo da api bank', () {
-    final venda = VendaFarmacia.fromJson({
-      'id': 1,
-      'valor': '150.75',
-      'numero_conta': 1234,
-    });
-
-    expect(venda.valor, 150.75);
-    expect(venda.numeroCupom, 1234);
-  });
-
   test('converte cliente para Map e JSON', () {
     final cliente = Cliente(nome: 'Maria Oliveira', codigo: 4321);
 

@@ -4,7 +4,7 @@
 
 **Nome completo do estudante:** Pedro Henrique Xavier Constancio
 
-**Link da API publicada:** https://bank-api-t311.onrender.com
+**Link da API publicada:** https://farmacia-api.onrender.com
 
 **Descrição resumida da aplicação:** aplicativo Flutter para registrar e listar
 vendas de uma farmácia, além de cadastrar clientes. Os dados são persistidos
@@ -14,8 +14,8 @@ PostgreSQL, seguindo a estratégia Offline-first.
 ## Repositórios e entregáveis
 
 - **Repositório Flutter:** https://github.com/Ph-Xavier/Farmacia
-- **Repositório da API:** https://github.com/Ph-Xavier/bank-api
-- **API publicada:** https://bank-api-t311.onrender.com
+- **Repositório da API:** https://github.com/Ph-Xavier/farmacia-api
+- **API publicada:** https://farmacia-api.onrender.com
 - **Roteiro dos testes obrigatórios:** [`docs/ROTEIRO_TESTES.md`](docs/ROTEIRO_TESTES.md)
 - **Vídeo de demonstração:** inserir o link do vídeo antes da entrega no Teams
 
@@ -65,18 +65,17 @@ lib/
 
 ## API própria
 
-- **Repositório da API:** https://github.com/Ph-Xavier/bank-api
-- **API publicada:** https://bank-api-t311.onrender.com
+- **Repositório da API:** https://github.com/Ph-Xavier/farmacia-api
+- **API publicada:** https://farmacia-api.onrender.com
 
-A API foi criada a partir da base do projeto `bank-api` e recebeu as rotas da
-temática farmácia.
+A API contém apenas as rotas da temática farmácia.
 
-> **Importante — deploy no Render:** o código novo já está no repositório, mas
-> o serviço publicado precisa ser atualizado. No painel do Render, abra o
-> serviço `bank-api-t311`, clique em **Manual Deploy → Deploy latest commit** e
-> aguarde o status **Live**. Enquanto o deploy não for feito, as rotas
-> `/vendas` e `/clientes` retornam 404. Depois do deploy, acesse
-> `/criar-tabelas` uma vez para criar as tabelas no PostgreSQL.
+> **Importante — deploy no Render:** crie o Web Service com o nome
+> `farmacia-api` apontando para o repositório da API. Se o Render gerar um
+> subdomínio diferente de `farmacia-api.onrender.com`, atualize o link acima e o
+> `ApiService` (ou use `--dart-define=API_BASE_URL=...`). Depois do deploy,
+> acesse `/criar-tabelas` uma vez para criar as tabelas no PostgreSQL. Após
+> confirmar que o novo serviço está **Live**, exclua o Web Service antigo.
 
 ### Rotas principais
 
@@ -102,16 +101,12 @@ Exemplo de corpo no `POST /clientes`:
 { "nome": "Maria Oliveira", "codigo": 4321 }
 ```
 
-As rotas `/transferencias` e `/contatos` foram mantidas para não quebrar o
-projeto original do 1º bimestre.
-
 ### PostgreSQL
 
 As tabelas são criadas pela rota `GET /criar-tabelas`:
 
 - `vendas (id, valor, numero_cupom)`
 - `clientes (id, nome, codigo)`
-- `transferencias` e `contatos` (base original)
 
 No Render, configure a variável `DATABASE_URL` com a connection string do
 PostgreSQL e acesse `/criar-tabelas` uma vez após o deploy.

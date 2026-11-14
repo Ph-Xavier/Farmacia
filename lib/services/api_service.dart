@@ -9,7 +9,7 @@ import '../models/venda_farmacia.dart';
 
 // classe responsável por centralizar a comunicação com a api.
 //
-// a api é própria da temática farmácia (base do projeto bank) e expõe
+// a api é própria da temática farmácia e expõe
 // as rotas /vendas e /clientes.
 class ApiService {
   // endereço base da api publicada no render.
@@ -21,7 +21,7 @@ class ApiService {
   // isso facilita os testes de indisponibilidade da api.
   static const String baseUrl = String.fromEnvironment(
     'API_BASE_URL',
-    defaultValue: 'https://bank-api-t311.onrender.com',
+    defaultValue: 'https://farmacia-api.onrender.com',
   );
 
   // tempo máximo de espera de cada requisição.
