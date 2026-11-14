@@ -11,6 +11,8 @@ vendas de uma farmácia, além de cadastrar clientes. Os dados são persistidos
 localmente em SQLite e sincronizados com uma API Node.js/Express conectada ao
 PostgreSQL, seguindo a estratégia Offline-first.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Ph-Xavier/farmacia-api)
+
 ## Repositórios e entregáveis
 
 - **Repositório Flutter:** https://github.com/Ph-Xavier/Farmacia
@@ -70,12 +72,15 @@ lib/
 
 A API contém apenas as rotas da temática farmácia.
 
-> **Importante — deploy no Render:** crie o Web Service com o nome
-> `farmacia-api` apontando para o repositório da API. Se o Render gerar um
-> subdomínio diferente de `farmacia-api.onrender.com`, atualize o link acima e o
-> `ApiService` (ou use `--dart-define=API_BASE_URL=...`). Depois do deploy,
-> acesse `/criar-tabelas` uma vez para criar as tabelas no PostgreSQL. Após
-> confirmar que o novo serviço está **Live**, exclua o Web Service antigo.
+> **Importante — deploy no Render:** o repositório da API inclui um
+> `render.yaml`. No Render, use **New + → Blueprint**, selecione o repositório
+> `farmacia-api` e clique em **Apply**. Isso cria o Web Service
+> `farmacia-api` e um PostgreSQL novo `farmacia-db`, já conectados pela variável
+> `DATABASE_URL`. Depois do deploy, acesse `/criar-tabelas` uma vez. Se o Render
+> gerar um subdomínio diferente de `farmacia-api.onrender.com`, atualize o link
+> acima e o `ApiService` (ou use `--dart-define=API_BASE_URL=...`). Após
+> confirmar que o novo serviço está **Live**, exclua o Web Service e o banco
+> antigos no Render.
 
 ### Rotas principais
 
