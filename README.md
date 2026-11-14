@@ -11,6 +11,14 @@ vendas de uma farmácia, além de cadastrar clientes. Os dados são persistidos
 localmente em SQLite e sincronizados com uma API Node.js/Express conectada ao
 PostgreSQL, seguindo a estratégia Offline-first.
 
+## Repositórios e entregáveis
+
+- **Repositório Flutter:** https://github.com/Ph-Xavier/Farmacia
+- **Repositório da API:** https://github.com/Ph-Xavier/bank-api
+- **API publicada:** https://bank-api-t311.onrender.com
+- **Roteiro dos testes obrigatórios:** [`docs/ROTEIRO_TESTES.md`](docs/ROTEIRO_TESTES.md)
+- **Vídeo de demonstração:** inserir o link do vídeo antes da entrega no Teams
+
 ## Continuidade do projeto
 
 O projeto evolui o aplicativo de vendas da farmácia desenvolvido no 1º
