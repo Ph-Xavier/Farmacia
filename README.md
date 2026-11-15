@@ -18,8 +18,6 @@ PostgreSQL, seguindo a estratégia Offline-first.
 - **Repositório Flutter:** https://github.com/Ph-Xavier/Farmacia
 - **Repositório da API:** https://github.com/Ph-Xavier/farmacia-api
 - **API publicada:** https://farmacia-api-of5q.onrender.com
-- **Roteiro dos testes obrigatórios:** [`docs/ROTEIRO_TESTES.md`](docs/ROTEIRO_TESTES.md)
-- **Vídeo de demonstração:** inserir o link do vídeo antes da entrega no Teams
 
 ## Continuidade do projeto
 
@@ -71,16 +69,6 @@ lib/
 - **API publicada:** https://farmacia-api-of5q.onrender.com
 
 A API contém apenas as rotas da temática farmácia.
-
-> **API publicada:** o serviço está no ar em
-> `https://farmacia-api-of5q.onrender.com` (o Render adicionou o sufixo `-of5q`
-> porque `farmacia-api` já estava em uso). O repositório da API inclui um
-> `render.yaml`. Se precisar recriar os recursos, use **New + → Blueprint**,
-> selecione o repositório `farmacia-api` e clique em **Apply**. Isso cria o Web
-> Service e um PostgreSQL `farmacia-db`, já conectados pela variável
-> `DATABASE_URL`. Depois do deploy, acesse `/criar-tabelas` uma vez. Se o Render
-> gerar outro subdomínio, atualize o link acima e o `ApiService` (ou use
-> `--dart-define=API_BASE_URL=...`).
 
 ### Rotas principais
 
@@ -185,8 +173,6 @@ flutter run --dart-define=API_BASE_URL=https://api-invalida.invalid
 2. No dashboard, toque em **Sincronizar pendentes**.
 3. Confirme a mensagem de sucesso e o contador zerado.
 4. Consulte a API/PostgreSQL e confirme o registro remoto.
-
-Mais detalhes em [`docs/ROTEIRO_TESTES.md`](docs/ROTEIRO_TESTES.md).
 
 ## Verificações automáticas
 
