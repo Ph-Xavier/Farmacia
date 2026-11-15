@@ -11,8 +11,6 @@ vendas de uma farmácia, além de cadastrar clientes. Os dados são persistidos
 localmente em SQLite e sincronizados com uma API Node.js/Express conectada ao
 PostgreSQL, seguindo a estratégia Offline-first.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Ph-Xavier/farmacia-api)
-
 ## Repositórios e entregáveis
 
 - **Repositório Flutter:** https://github.com/Ph-Xavier/Farmacia
@@ -72,15 +70,15 @@ A API contém apenas as rotas da temática farmácia.
 
 ### Rotas principais
 
-| Método | Rota              | Descrição                        |
-| ------ | ----------------- | -------------------------------- |
-| GET    | `/teste-banco`    | Testa a conexão com o PostgreSQL |
-| GET    | `/criar-tabelas`  | Cria as tabelas (idempotente)    |
-| GET    | `/vendas`         | Lista as vendas                  |
-| POST   | `/vendas`         | Cadastra uma venda               |
-| GET    | `/clientes`       | Lista os clientes                |
-| POST   | `/clientes`       | Cadastra um cliente              |
-| GET    | `/clientes/:id`   | Busca um cliente por id          |
+| Método | Rota             | Descrição                        |
+| ------ | ---------------- | -------------------------------- |
+| GET    | `/teste-banco`   | Testa a conexão com o PostgreSQL |
+| GET    | `/criar-tabelas` | Cria as tabelas (idempotente)    |
+| GET    | `/vendas`        | Lista as vendas                  |
+| POST   | `/vendas`        | Cadastra uma venda               |
+| GET    | `/clientes`      | Lista os clientes                |
+| POST   | `/clientes`      | Cadastra um cliente              |
+| GET    | `/clientes/:id`  | Busca um cliente por id          |
 
 Exemplo de corpo no `POST /vendas`:
 
